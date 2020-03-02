@@ -15,7 +15,7 @@ function TrailDescription(props) {
 function Trail(props) {
   return (
     [
-      <TrailTitle key={props.id} value={props.value} />,
+      <TrailTitle value={props.value} />,
       <TrailDescription value={props.description} />
     ]
   )
@@ -29,7 +29,7 @@ function TrailCollection(props) {
       <h1>Trail Collection</h1>,
       trails.map((trail) => {
         return (
-          <Trail key={trail.id} value={trail.name} />
+          <Trail key={trail.id} value={trail.name} description={trail.description} />
         )
       })
     ]
